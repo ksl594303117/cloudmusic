@@ -1,8 +1,8 @@
 {
-    "buildVersion": 1557211229553,
+    "buildVersion": 1557212693578,
     "build": {
         "ssr": false,
-        "publicPath": "/",
+        "publicPath": "/cloudmusic/",
         "compress": true,
         "cssExtract": true
     },
