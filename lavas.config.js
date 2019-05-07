@@ -26,7 +26,7 @@ module.exports = {
   },
   router: {
     mode: 'history',
-    base: '/',
+    base: '/cloudmusic/',
     pageTransition: {
       type: 'fade',
       transitionClass: 'fade'
