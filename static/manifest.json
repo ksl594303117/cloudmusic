@@ -1,5 +1,5 @@
 {
-    "start_url": "/?utm_source=homescreen",
+    "start_url": "/cloudmusic?utm_source=homescreen",
     "name": "cloudmusic",
     "short_name": "cloudmusic",
     "icons": [

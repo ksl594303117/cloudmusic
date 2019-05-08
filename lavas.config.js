@@ -30,7 +30,25 @@ module.exports = {
     pageTransition: {
       type: 'fade',
       transitionClass: 'fade'
-    }
+    },
+    rewrite: [
+      {
+        from: '/recommend',
+        to: '/recommend/index'
+      },
+      {
+        from: '/singer',
+        to: '/singer/index'
+      },
+      {
+        from: '/rank',
+        to: '/rank/index'
+      },
+      {
+        from: '/search',
+        to: '/search/index'
+      }
+    ]
   },
   serviceWorker: {
     // If true, generate service-worker.js and sw-register.js

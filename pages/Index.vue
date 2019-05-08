@@ -1,8 +1,13 @@
 <template>
   <div class="home">
-    <CurrentMusic :data="current_music"></CurrentMusic>
+    <m-header></m-header>
+    <Tab></Tab>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <!-- <current-music :data="current_music"></current-music> -->
 
-    <div class="list-box" @mouseover="toggeleList('show')" @mouseout="toggeleList('hide')">
+    <!-- <div class="list-box" @mouseover="toggeleList('show')" @mouseout="toggeleList('hide')">
       <div class="music-list" v-show="show_music">
         <MusicItem
           v-for="(item, i) in musicList"
@@ -14,13 +19,15 @@
       <p class="cur-music">
         {{current_music.title}} {{current_music.author}}
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import CurrentMusic from '../components/CurrentMusic'
 import MusicItem from '../components/MusicItem'
+import MHeader from '../components/mHeader'
+import Tab from '../components/Tab'
 // function setState(store) {}
 // export default {
     
@@ -87,7 +94,9 @@ export default {
   },
   components: {
     CurrentMusic,
-    MusicItem
+    MusicItem,
+    MHeader,
+    Tab
   }
 }
 </script>
@@ -95,33 +104,31 @@ export default {
 <style lang="stylus" scoped>
 
 .home
-  border 1px solid blue
-  height 200px
-  width 600px
-  position relative
+  width 100%
+  box-sizing border-box 
+  // position relative
 
-  .list-box
-    position absolute
-    bottom 0
-    right 10px
-    width 200px
-    box-sizing border-box
+  // .list-box
+  //   position absolute
+  //   bottom 0
+  //   right 10px
+  //   width 200px
+  //   box-sizing border-box
 
-    .cur-music
-      height 30px
-      line-height 30px
-      margin 0
-      cursor pointer
+  //   .cur-music
+  //     height 30px
+  //     line-height 30px
+  //     margin 0
+  //     cursor pointer
 
-    .music-list
-      height 65px
-      background-color aliceblue
-      padding 10px 20px
-      border 1px solid pink
-      box-sizing border-box
-      padding 5px 8px
-      overflow-y scroll
-      bottom 30px
-      background-color #fff
+  //   .music-list
+  //     height 65px
+  //     background-color aliceblue
+  //     padding 10px 20px
+  //     border 1px solid pink
+  //     box-sizing border-box
+  //     padding 5px 8px
+  //     overflow-y scroll
+  //     bottom 30px
 
 </style>

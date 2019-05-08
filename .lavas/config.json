@@ -1,5 +1,5 @@
 {
-    "buildVersion": 1557218208080,
+    "buildVersion": 1557301166355,
     "build": {
         "ssr": false,
         "publicPath": "/cloudmusic/",
@@ -17,7 +17,25 @@
         "pageTransition": {
             "type": "fade",
             "transitionClass": "fade"
-        }
+        },
+        "rewrite": [
+            {
+                "from": "/recommend",
+                "to": "/recommend/index"
+            },
+            {
+                "from": "/singer",
+                "to": "/singer/index"
+            },
+            {
+                "from": "/rank",
+                "to": "/rank/index"
+            },
+            {
+                "from": "/search",
+                "to": "/search/index"
+            }
+        ]
     },
     "errorHandler": {
         "defaultErrorMessage": "Internal Server Error",

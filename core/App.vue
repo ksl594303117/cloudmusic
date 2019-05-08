@@ -120,7 +120,6 @@ $page-transition-duration = 0.35s
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
     text-align center
-    color #2c3e50
     height 100%
 
     .app-view
@@ -130,7 +129,6 @@ $page-transition-duration = 0.35s
         bottom 0
         left 0
         -webkit-overflow-scrolling touch
-        background white
 
         &::-webkit-scrollbar
             width 0
